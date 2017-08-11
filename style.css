@@ -1,10 +1,10 @@
 /*
-Theme Name: GEMM_Framework
+Theme Name: QuadCollective Theme
 Theme URI: http://underscores.me/
 Author: Zach Slagowski
 Author URI: http://www.greeneyedmonstermedia.com/
 Description: minimal
-Version: 1.0.0
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: gemm-framework
@@ -320,7 +320,15 @@ p {
 
     font-size: 1.5em;
     font-weight: 400;
-}.site-content li {    font-size: 1.5em;}@media (min-width: 767px) {    p {      font-size: 1.8rem;    }}
+}
+.site-content li {
+    font-size: 1.5em;
+}
+@media (min-width: 767px) {
+    p {
+      font-size: 2rem;
+    }
+}
 
 dfn,
 cite,
@@ -1774,7 +1782,7 @@ h1.qc-main-blog-header {
 }
 
 .qc-entry-content-single-blog p {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 
