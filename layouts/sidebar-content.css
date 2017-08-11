@@ -1,0 +1,25 @@
+/*
+ * Theme Name: GEMM_Framework
+ *
+ * Layout: Sidebar-Content
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+.site-content {
+	float: right;
+	margin: 0 0 0 -20%;
+	width: 100%;
+}
+.site-main {
+	margin: 0 0 0 20%;
+}
+.site-content .widget-area {
+	float: left;
+	overflow: hidden;
+	width: 20%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
