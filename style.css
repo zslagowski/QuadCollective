@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Zach Slagowski
 Author URI: http://www.greeneyedmonstermedia.com/
 Description: minimal
-Version: 1.1.0
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: gemm-framework
@@ -798,8 +798,44 @@ a:focus {
 a:hover,
 a:active {
     outline: 0;
-}.site-content a {  text-decoration: underline;}.site-content a:hover {  text-decoration: none;  font-style: italic;}
-.row.qc-main-blog-row a {  text-decoration: none;}.row.qc-main-blog-row a:hover {  font-style: normal;}.qc-submit-blog a {  text-decoration: none;}.qc-main-videos-content a {  text-decoration: none;}
+}
+
+.site-content a {
+  color: #40411E;
+}
+
+.site-content a:hover
+  {
+    text-decoration: none;
+    color: #b87328
+  }
+  
+.row.qc-main-blog-row a
+  {
+    text-decoration: none;
+  }
+
+.row.qc-main-blog-row a:hover {
+  font-style: normal;
+}
+
+.qc-submit-blog a {
+  text-decoration: none;
+}
+
+.qc-main-videos-content a {
+  text-decoration: none;
+}
+
+.qc-blog-categories-list a {
+  text-decoration:none;
+  color: #40411E;
+}
+
+.qc-blog-categories-list a:hover {
+  color: #b87328;
+  font-style: normal;
+}
 
 /*--------------------------------------------------------------
 ## Menus
@@ -1251,10 +1287,6 @@ object {
     font-weight: 700;
 }
 
-.qc-frontpage a:hover {
-    text-decoration: underline;
-}
-
 p.qc-front-shop-button {
     background-color: #BB7429;
     font-size: 2em;
@@ -1272,6 +1304,11 @@ p.qc-front-shop-button {
 p.qc-front-shop-button a {
     color: #fff;
 }
+
+p.qc-front-shop-button a:hover {
+    color: #000;
+}
+
 
 h2.woocommerce-loop-product__title {
   text-align: center;
@@ -1494,6 +1531,11 @@ aside#secondary {
 .widget-area li a {
   text-decoration: none;
 }
+
+.widget-area li a:hover {
+  color: #b27128;
+}
+
 
 .widget-area li {
   font-size: 1em;
@@ -1721,6 +1763,20 @@ h1.qc-main-blog-header {
     font-size: 4em;
     margin-bottom: 2em;
 }
+
+.qc-blog-categories-list {
+  border: 3px solid #787746;
+}
+
+.qc-blog-categories-list ul {
+  margin-top: 1.5em;
+}
+
+.qc-blog-categories-list ul li {
+  display: inline;
+  margin-right: 2em;
+  margin-top: 1em;
+}
 
 .qc-main-blog-page h2 {
   font-size: 1.75em;
@@ -1810,6 +1866,10 @@ h1.qc-main-blog-header {
 .qc-submit-blog-single a {
   color: #fff;
 }
+
+.widget-blog-home-sidebar {
+  margin: 6em 1.5em 2em 1.5em;
+}
 
 /*--------------------------------------------------------------
 # Blog Submissions Page

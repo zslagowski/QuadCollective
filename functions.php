@@ -114,6 +114,18 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'Blogs Home Sidebar',
+		'id' => 'blog-home-sidebar',
+		'description' => 'Videos Sidebar',
+		'before_widget' => '<section id="blog-home-sidebar" class="widget widget-blog-home-sidebar">',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widget-blog-home-title">',
+		'after_title' => '</h2>',
+	));
+}
+
 /**
  * Enqueue scripts and styles.
  */
