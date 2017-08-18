@@ -26,7 +26,7 @@
         </div> <!-- col-md-6 -->
   
         <div class="col-md-12">
-          <h2><?php the_title(); ?></h2>
+          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           <h5><?php the_author(); ?> <span class="qc-blog-date"><?php the_date(); ?></span></h5>
           <a href="<?php the_permalink(); ?>">
             <p><?php the_excerpt(); ?></p>
@@ -39,7 +39,8 @@
     <?php endwhile; endif; ?>
   </div>
   <div class="col-md-4 text-center">
-      <?php dynamic_sidebar('blog-home-sidebar'); ?>
+    <h2 class="widget-blog-home-sidebar-title">Check Out Some of Our Recommendations</h2>
+    <?php dynamic_sidebar('blog-home-sidebar'); ?>
   </div>
 </div> <!--container-->
 

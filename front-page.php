@@ -23,6 +23,52 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 
 <div class="container qc-frontpage">
     <?php the_content(); ?>
-</div><?php endwhile; endif; wp_reset_postdata(); ?><section id="qc-front-recent-posts" class="">    <div class="container">        <h2 class="text-center qc-recent-posts-front">Recent Posts</h2>        <?php $query = new WP_Query( array( 'posts_per_page' => 3 ) ); ?>        <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>                <div class="qc-main-blog row">                    <div class="col-md-5 qc-front-posts-post-thumbnail text-center"><a href="<?php the_permalink('medium'); ?>"><?php the_post_thumbnail(); ?></a></div>                    <div class="col-md-7">                      <div class="rb-front-posts-title"><a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a></div>                      <div class="rb-front-posts-meta"><h5><span class="qc-blog-date"><?php echo get_the_date(); ?></span> | <?php the_category( ' | '); ?></h5></div>                      <div class="rb-front-posts-excerpt"><p><?php the_excerpt(); ?></p></div>                    </div>                </div>        <?php endwhile; else : ?>            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>        <?php endif; ?>    </div> <!--container--></section>
+</div>
+<?php endwhile; endif; wp_reset_postdata(); ?>
+
+<section id="qc-frontpage-tiles-section" class="qc-frontpage-tiles-section">
+  <div class="container">
+    <div class="col-md-4 qc-frontpage-social-feed">
+      <div class="col-xs-12 qc-frontpage-tiles">
+        <div class="qc-front-page-social-feed-scroll text-center"><?php dynamic_sidebar('qc-homepage-facebook-sidebar'); ?></div>
+      </div>
+    </div>
+    <div class="col-md-4 qc-frontpage-recent-posts">
+      <div class="col-xs-12 qc-frontpage-tiles">
+        <h2 class="text-center">
+          Recent Posts
+        </h2>
+
+        <?php $query = new WP_Query( array(
+          'posts_per_page' => 6,
+          'post_type' => array( 'post', 'videos')
+         ) ); ?>
+
+          <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+
+
+                  <div class="qc-main-blog row">
+                      <div class="qc-front-posts-posts">
+                        <a class="qc-frontpage-tile-blog-thumbnail col-xs-3 text-center" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                        <a class="qc-frontpage-tile-blog-title col-xs-9" href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+                      </div>
+                  </div>
+
+
+          <?php endwhile; else : ?>
+              <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+          <?php endif; ?>
+        </div>
+    </div>
+    <div class="col-md-4 qc-frontpage-ads">
+      <div class="col-xs-12 qc-frontpage-tiles">
+        <h2 class="text-center">
+          Recommendations
+        </h2>
+        <div class="text-center"><?php dynamic_sidebar('qc-homepage-ad-sidebar'); ?></div>
+      </div>
+    </div>
+  </div> <!--container-->
+</section>
 <?php
 get_footer();

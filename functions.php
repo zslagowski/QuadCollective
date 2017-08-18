@@ -118,7 +118,31 @@ if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 		'name' => 'Blogs Home Sidebar',
 		'id' => 'blog-home-sidebar',
-		'description' => 'Videos Sidebar',
+		'description' => 'Blog Homepage Sidebar',
+		'before_widget' => '<section id="blog-home-sidebar" class="widget widget-blog-home-sidebar">',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widget-blog-home-title">',
+		'after_title' => '</h2>',
+	));
+}
+
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'Home Page Ads',
+		'id' => 'qc-homepage-ad-sidebar',
+		'description' => 'Only 2 Ads for Section',
+		'before_widget' => '<section id="blog-home-sidebar" class="widget widget-blog-home-sidebar">',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widget-blog-home-title">',
+		'after_title' => '</h2>',
+	));
+}
+
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'Home Page Facebook Feed',
+		'id' => 'qc-homepage-facebook-sidebar',
+		'description' => 'Use Facebook Page Like Widget',
 		'before_widget' => '<section id="blog-home-sidebar" class="widget widget-blog-home-sidebar">',
 		'after_widget' => '</section>',
 		'before_title' => '<h2 class="widget-blog-home-title">',

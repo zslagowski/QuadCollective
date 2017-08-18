@@ -43,6 +43,8 @@
 				'after'  => '</div>',
 			) );
 		?>
+
+		<p class="qc-post-tags"><?php the_tags(); ?></p>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

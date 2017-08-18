@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Zach Slagowski
 Author URI: http://www.greeneyedmonstermedia.com/
 Description: minimal
-Version: 1.2.0
+Version: 1.4.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: gemm-framework
@@ -567,6 +567,8 @@ textarea {
 
 .qc-top-row {
   background-color: #40411E;
+  position: relative;
+  z-index: 1000;
 }
 
 .qc-icon-row {
@@ -648,7 +650,7 @@ hr {
 }
 
 .fa-shopping-cart {
-  font-size: 20px;
+  font-size: 20px !important;
   margin: 1em;
   margin-right: 2em;
 
@@ -777,17 +779,17 @@ i.qc-search-icon {
 --------------------------------------------------------------*/
 
 a {
-    color: #000;
+    color: #bb7429;
 }
 
 a:visited {
-    color: #000;
+    color: #bb7429;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: #000;
+    color: #40411E;
     text-decoration: none;
 }
 
@@ -801,13 +803,13 @@ a:active {
 }
 
 .site-content a {
-  color: #40411E;
+  color: #b87328
 }
 
 .site-content a:hover
   {
     text-decoration: none;
-    color: #b87328
+    color: #40411E;
   }
   
 .row.qc-main-blog-row a
@@ -1393,7 +1395,44 @@ span.nf-form-title {
 
 .nf-after-form-content {
     display: none;
-}#qc-front-recent-posts {  margin-bottom: 7em;}.qc-recent-posts-front {  margin-bottom: 2em;}
+}
+
+#qc-front-recent-posts {
+  margin-bottom: 7em;
+}
+
+.qc-recent-posts-front {
+  margin-bottom: 2em;
+}
+
+.qc-front-page-social-feed-scroll .widget-blog-home-sidebar {
+  margin-top: 2em;
+  margin-left: .8em;
+}
+
+.qc-front-page-social-feed-scroll .widget-blog-home-title {
+  margin-bottom: 3em;
+}
+
+.qc-frontpage-tiles-section h3 {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.qc-frontpage-tiles {
+  border: 3px solid #40411E;
+  border-radius: 5px;
+  margin-bottom: 6em;
+  height: 650px;
+  overflow-y: hidden;
+}
+
+.qc-frontpage-recent-posts h2 {
+  margin-bottom: 3em;
+}
+
+
+
 @media (max-width: 1200px) {
   .qc-frontpage-header-image {
       height: 600px;
@@ -1538,7 +1577,7 @@ aside#secondary {
 
 
 .widget-area li {
-  font-size: 1em;
+  font-size: 1.4em;
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: 700;
@@ -1599,8 +1638,7 @@ ul.product-categories {
 }
 
 .woocommerce .woocommerce-breadcrumb {
-  position: relative;
-  top: 13em;
+  display: none;
 }
 
 .woocommerce div.product p.price, .woocommerce div.product span.price {
@@ -1612,11 +1650,13 @@ div[itemprop="description"] {
 }
 
 .woocommerce-product-details__short-description li {
-    font-size: 1.2em;
+    font-size: 1.8em;
 }
 
 .woocommerce div.product form.cart .variations select {
     font-size: 1.2em;
+    position: relative;
+    right: 15%;
 }
 
 .woocommerce div.product .stock {
@@ -1798,7 +1838,11 @@ h1.qc-main-blog-header {
 
 .qc-main-blog-row {
   margin: 4em 0;
-}.qc-main-blog {  margin-bottom: 3em;}
+}
+
+.qc-main-blog {
+  margin-bottom: 3em;
+}
 
 .qc-submit-blog {
   background-color: #BB7429;
@@ -1866,6 +1910,10 @@ h1.qc-main-blog-header {
 .qc-submit-blog-single a {
   color: #fff;
 }
+
+.widget-blog-home-sidebar-title {
+  margin-top: 3em;
+}
 
 .widget-blog-home-sidebar {
   margin: 6em 1.5em 2em 1.5em;
@@ -1940,6 +1988,10 @@ h1.qc-main-blog-header {
 .qc-blog-submission-container .nf-response-msg {
   top: 0px;
 }
+
+p.qc-post-tags {
+  font-size:1.5em;
+}
 
 
 /*--------------------------------------------------------------

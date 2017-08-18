@@ -12,6 +12,8 @@ get_header();
 
   <div class="qc-single-video-content">
     <?php the_content(); ?>
+
+    <p class="qc-post-tags"><?php the_tags(); ?></p>
   </div>
 
   <?php
