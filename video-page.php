@@ -4,7 +4,7 @@
 get_header();
 ?>
 
-<h1 class="text-center qc-main-videos-header"><?php echo get_the_title(15); ?></h1>
+<h1 class="text-center qc-main-videos-header"><img src="https://www.quadcollective.com/wp-content/uploads/2017/08/QC-Logo-Stamp-Middle-Green.png" alt="" width="150" height="150" /> <?php echo get_the_title(15); ?></h1>
 
 <div id="primary" class="content-area">
   <main id="main" class="site-main site-main-video" role="main">

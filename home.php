@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
 <div class="container qc-main-blog-page">
-
-  <h1 class="text-center qc-main-blog-header"><?php echo get_the_title(13); ?></h1>
+  <div class="row qc-home-blog-header-title text-center">
+
+    <h1 class="qc-main-blog-header"><img src="https://www.quadcollective.com/wp-content/uploads/2017/08/QC-Logo-Stamp-Middle-Green.png" alt="" width="150" height="150" /> <?php echo get_the_title(13); ?></h1>
+  </div>
 
   <div class="row">
     <div class="col-sm-12 qc-blog-categories-list text-center">
