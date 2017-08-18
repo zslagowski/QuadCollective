@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Zach Slagowski
 Author URI: http://www.greeneyedmonstermedia.com/
 Description: minimal
-Version: 1.4.0
+Version: 1.4.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: gemm-framework
@@ -652,9 +652,17 @@ hr {
 .fa-shopping-cart {
   font-size: 20px !important;
   margin: 1em;
-  margin-right: 2em;
-
+  margin-right: 2em;
 }
+
+.qc-icon-row a {
+  color: #000;
+}
+
+.qc-icon-row a:hover {
+  color: #bb7429;
+}
+
 
 /*--------------------------------------------------------------
 # Search Form Effect
